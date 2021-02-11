@@ -2,6 +2,8 @@
 
 
 ## Logotipo
+![4621632323_7cc06575-7245-4b60-8fa7-a573d10695b0](https://user-images.githubusercontent.com/78757752/107674322-d91cba00-6c64-11eb-93cd-d208bcd15697.png)
+
 
 
 ## Eslogan
