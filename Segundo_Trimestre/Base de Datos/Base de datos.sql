@@ -1,5 +1,7 @@
 create database farmifarmacy;
 
+	use farmifarmacy; 
+
 	create table cliente (
 		id_cliente varchar(15) not null,
 		fk_id_vendedor varchar(15) not null,
@@ -75,13 +77,53 @@ create database farmifarmacy;
 		fecha datetime not null,
 		valor_total INT(20) not null,
 		estado_cotizacion boolean not null,
-		primary key (id_cotizaciion, fkpk_id_cliente)
-		); 
+		primary key (id_cotizaciion)
+		);
 
 	create table roles (
 		cod_rol varchar(6) not null,
 		fkpk_id_cliente varchar(15) not null,
 		rol varchar(10) not null,
 		estado_rol boolean not null,
-		primary key (cod_rol, fkpk_id_cliente)
+		primary key (cod_rol)
 		);
+
+	Alter table cliente_has_tdoc add
+	foreign key (id_cliente)
+	references cliente(id_cliente);
+
+	Alter table cliente_has_tdoc add
+	foreign key (t_doc)
+	references t_doc(t_doc);
+
+	Alter table tdoc_has_vendedor add
+	foreign key (t_doc)
+	references t_doc(t_doc);
+
+	Alter table tdoc_has_vendedor add
+	foreign key (id_vendedor)
+	references vendedor(id_vendedor);
+
+	Alter table cliente_has_producto add
+	foreign key (id_cliente)
+	references cliente(id_cliente);
+
+	Alter table cliente_has_producto add
+	foreign key (cod_producto)
+	references producto(cod_producto);
+
+	Alter table producto add
+	foreign key (fk_cod_lote)         
+	references lote (cod_lote);
+
+	Alter table cotizacion add
+	foreign key (fkpk_id_cliente)               
+	references cliente_has_producto (id_cliente);
+
+	Alter table cliente add
+	foreign key (fk_id_vendedor)                     
+	references vendedor (id_vendedor);
+
+	Alter table roles add
+	foreign key (cod_rol)
+	references cliente(id_cliente);
