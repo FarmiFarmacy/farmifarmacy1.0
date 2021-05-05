@@ -85,6 +85,7 @@ create database farmifarmacy;
 		fkpk_id_cliente varchar(15) not null,
 		rol varchar(10) not null,
 		estado_rol boolean not null,
+<<<<<<< HEAD
 		primary key (cod_rol, fkpk_id_cliente)
 		);
 
@@ -93,6 +94,9 @@ create database farmifarmacy;
 		roles_cod_rol varchar(6) not null,
 		roles_fkpk_id_cliente varchar(15) not null,
 		primary key (vendedor_id_vendedor, roles_cod_rol, roles_fkpk_id_cliente)
+=======
+		primary key (cod_rol)
+>>>>>>> de6b97ea8e13dee945b7624d356c169954123c54
 		);
 
 	Alter table cliente_has_tdoc add
@@ -125,13 +129,18 @@ create database farmifarmacy;
 
 	Alter table cotizacion add
 	foreign key (fkpk_id_cliente)               
+<<<<<<< HEAD
 	references cliente (id_cliente);
+=======
+	references cliente_has_producto (id_cliente);
+>>>>>>> de6b97ea8e13dee945b7624d356c169954123c54
 
 	Alter table cliente add
 	foreign key (fk_id_vendedor)                     
 	references vendedor (id_vendedor);
 
 	Alter table roles add
+<<<<<<< HEAD
 	foreign key (fkpk_id_cliente)
 	references cliente(id_cliente);
 
@@ -142,3 +151,7 @@ create database farmifarmacy;
 	Alter table roles_has_vendedor add
 	foreign key (roles_cod_rol, roles_fkpk_id_cliente)
 	references roles (cod_rol, fkpk_id_cliente);
+=======
+	foreign key (cod_rol)
+	references cliente(id_cliente);
+>>>>>>> de6b97ea8e13dee945b7624d356c169954123c54
