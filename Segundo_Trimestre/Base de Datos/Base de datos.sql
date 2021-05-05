@@ -11,7 +11,7 @@ create database farmifarmacy;
 		telefono INT(15) not null,
 		email varchar(45) not null,
 		estado_cliente boolean not null,
-		primary key (id_cliente, fk_id_vendedor) 
+		primary key (id_cliente) 
 		);
 
 	create table cliente_has_tdoc (
@@ -59,7 +59,7 @@ create database farmifarmacy;
 		descripcion varchar(45) not null,
 		valor_unitario INT(20) not null,
 		estado_producto boolean not null,
-		primary key (cod_producto, fk_cod_lote)
+		primary key (cod_producto)
 		);	
 
 	create table lote (
@@ -76,7 +76,7 @@ create database farmifarmacy;
 		valor_total INT(20) not null,
 		estado_cotizacion boolean not null,
 		primary key (id_cotizaciion, fkpk_id_cliente)
-		);
+		); 
 
 	create table roles (
 		cod_rol varchar(6) not null,
