@@ -157,7 +157,7 @@ create database farmifarmacy;
 
 	insert into t_doc
 	values 
-	('CC','Cédula de Identidad',1),
+	('CC','Cédula de Ciudadania',1),
 	('CE','Cédula de Extranjeria',1),
 	('TI','Tarjeta de Identidad',1),
 	('Nit','Número de Identificación Tributaria',1);	
