@@ -188,3 +188,28 @@ create database farmifarmacy;
 	('1013099140','Milton','Stiven','Gonzalez','Pinzon','Cra 72 #76 a 45 sur','3042217481','miltonstivenpinzon@gmail.com',1,'1003275748'),
 	('1001117202','Sharon','Guissell','Quintero','Espinel','carrera 121 N 128 B 21','3043748447','espinelsharon@gmail.com',1,'1011153857'),
 	('1000157790','Ivan','Mauricio','Cuervo','Campos','cra 14 # 91a 71 sur','3138144742','maocuervo13@gmail.com',1,'1026238784');
+
+
+	   -- joines
+	   -- cod_lote,desc_lote,estado_lote
+	   select cod_lote,estado_lote,desc_lote
+	   from lote
+	   join lote ON 
+
+
+	   select id_cliente,p_nombre,s_nombre,p_apellido,s_apellido,direccion,telefono,email,estado_cliente,fk_id_vendedor,id_vendedor,estado_vendedor,desc_tdoc,estado_tdoc
+	   from cliente 
+	   join vendedor ON id_vendedor =fk_id_vendedor
+	   join t_doc ON t_doc =t_doc
+
+
+
+
+
+
+
+
+
+
+
+		
