@@ -37,7 +37,7 @@ create database farmifarmacy;
 
 	create table usuario (
 		id_usuario varchar(15) not null,
-		tipo_documento_t_doc varchar(4) not null;
+		tipo_documento_t_doc varchar(4) not null,
 		p_nombre varchar(25) not null,
 		s_nombre varchar(20) null,
 		p_apellido varchar(25) not null,
