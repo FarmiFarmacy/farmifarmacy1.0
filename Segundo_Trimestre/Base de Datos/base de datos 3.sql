@@ -78,7 +78,7 @@ create database farmifarmacy;
 		primary key (usuario_id_ususario,rol_cod_rol,roles_fk_id_usuario)
 		);
 
-    create table cotizacion (
+    create table carro_de (
 		id_cotizacion int(6) not null,
 		fk_id_usuario varchar(15) not null,
 		fecha datetime not null,
