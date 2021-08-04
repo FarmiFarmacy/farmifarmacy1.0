@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="author" content="DicDat" />
-    <meta name="description" content="BD FARMIFARMACY" />
-    <title>FARMIFARMACY Diccionario</title>
+    <meta name="description" content="BD farmifarmacy" />
+    <title>farmifarmacy Diccionario</title>
     <style type="text/css">
     table{
         width: 100%;
@@ -51,9 +51,9 @@
 </head>
 <body>
 <div id="title-sect">
-<h1>BD FARMIFARMACY<br> Diccionario de Datos</h1>
+<h1>BD farmifarmacy<br> Diccionario de Datos</h1>
 <p>
-<em>2021-06-25</em>
+<em>2021-08-04</em>
 </p>
 <p class="proj-desc">
 <em></em>
@@ -61,17 +61,17 @@
 </div>
 <h2>Índice</h2>
 <ul>
-<li><a href='#cotizacion'>cotizacion</a></li>
+<li><a href='#carro_de_compras'>carro_de_compras</a></li>
 <li><a href='#lote'>lote</a></li>
 <li><a href='#producto'>producto</a></li>
 <li><a href='#rol'>rol</a></li>
 <li><a href='#tipo_documento'>tipo_documento</a></li>
 <li><a href='#usuario'>usuario</a></li>
-<li><a href='#usuario_has_cotizacion'>usuario_has_cotizacion</a></li>
 <li><a href='#usuario_has_rol'>usuario_has_rol</a></li>
+<li><a href='#venta'>venta</a></li>
 </ul>
-<table id='cotizacion'>
-<caption>cotizacion</caption>
+<table id='carro_de_compras'>
+<caption>carro_de_compras</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
@@ -87,8 +87,8 @@
     <th>Commentarios</th>
 </tr>
 <tr>
-    <td>id_cotizacion</td>
-    <td>VARCHAR(6)</td>
+    <td>cod_carro</td>
+    <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -97,7 +97,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el id de la cotizacion</td>
+    <td>Sr usuario en este espacio ubique el codigo del carro </td>
 </tr>
 <tr>
     <td>fecha</td>
@@ -110,11 +110,11 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese la fecha de la cotizacion</td>
+    <td>Sr usuario en este espacio ubique la fecha del carro </td>
 </tr>
 <tr>
-    <td>valor total</td>
-    <td>VARCHAR(30)</td>
+    <td>subtotal</td>
+    <td>INT(50)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -123,10 +123,10 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el valor total de la cotizacion</td>
+    <td>Sr usuario en este espacio ubique el subtotal del carro </td>
 </tr>
 <tr>
-    <td>estado_cotizacion</td>
+    <td>estado_carro</td>
     <td>TINYINT</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
@@ -136,7 +136,20 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el estado de la cotizacion</td>
+    <td>Sr usuario en este espacio ubique el estado del carro </td>
+</tr>
+<tr>
+    <td>venta_cod_venta</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr usuario en este espacio ubique el codigo de venta</td>
 </tr>
 <table id='lote'>
 <caption>lote</caption>
@@ -156,7 +169,7 @@
 </tr>
 <tr>
     <td>cod_lote</td>
-    <td>VARCHAR(6)</td>
+    <td>VARCHAR(20)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -165,20 +178,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el codigo del lote</td>
-</tr>
-<tr>
-    <td>lote</td>
-    <td>VARCHAR(10)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Sr usuario en este espacio ingrese el lote del producto </td>
+    <td>Sr usuario en este espacio ubique el codigo del lote</td>
 </tr>
 <tr>
     <td>estado_lote</td>
@@ -191,7 +191,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el estado del lote</td>
+    <td>Sr usuario en este espacio ubique el estado del lote</td>
 </tr>
 <table id='producto'>
 <caption>producto</caption>
@@ -211,7 +211,7 @@
 </tr>
 <tr>
     <td>cod_producto</td>
-    <td>VARCHAR(10)</td>
+    <td>INT(20)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -220,11 +220,11 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el codigo del producto </td>
+    <td>Sr usuario en este espacio ubique el codigo del producto </td>
 </tr>
 <tr>
     <td>cantidad</td>
-    <td>INT(4)</td>
+    <td>INT(10)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -233,7 +233,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese la cantidad del producto </td>
+    <td>Sr usuario en este espacio ubique la cantidad del producto </td>
 </tr>
 <tr>
     <td>descripcion</td>
@@ -246,11 +246,11 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese la descripcion del producto </td>
+    <td>Sr usuario en este espacio ubique la descripcion del producto </td>
 </tr>
 <tr>
     <td>valor_unitario</td>
-    <td>VARCHAR(30)</td>
+    <td>INT(50)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -259,7 +259,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el valor unitario del producto </td>
+    <td>Sr usuario en este espacio ubique el valor unitario del producto </td>
 </tr>
 <tr>
     <td>imagen</td>
@@ -272,7 +272,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese la imagen del producto </td>
+    <td>Sr usuario en este espacio ubique la imagen del producto </td>
 </tr>
 <tr>
     <td>estado_producto</td>
@@ -285,7 +285,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el estado del producto </td>
+    <td>Sr usuario en este espacio ubique el estado del producto </td>
 </tr>
 <tr>
     <td>usuario_id_usuario</td>
@@ -298,11 +298,11 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Sr usuario en este espacio ubique el id del usuario</td>
 </tr>
 <tr>
     <td>lote_cod_lote</td>
-    <td>VARCHAR(6)</td>
+    <td>VARCHAR(20)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -311,7 +311,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Sr usuario en este espacio ubique el codigo del lote</td>
 </tr>
 <table id='rol'>
 <caption>rol</caption>
@@ -331,7 +331,7 @@
 </tr>
 <tr>
     <td>cod_rol</td>
-    <td>VARCHAR(6)</td>
+    <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -340,7 +340,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el codigo del rol</td>
+    <td>Sr usuario en este espacio ubique el codigo del rol</td>
 </tr>
 <tr>
     <td>rol</td>
@@ -353,7 +353,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el rol</td>
+    <td>Sr usuario en este espacio ubique el rol del usuario</td>
 </tr>
 <tr>
     <td>estado_rol</td>
@@ -366,7 +366,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el estado del rol</td>
+    <td>Sr usuario en este espacio ubique el estado del rol </td>
 </tr>
 <table id='tipo_documento'>
 <caption>tipo_documento</caption>
@@ -386,7 +386,7 @@
 </tr>
 <tr>
     <td>t_doc</td>
-    <td>VARCHAR(4)</td>
+    <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -395,7 +395,8 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el tipo de documento</td>
+    <td>Sr usuario en este espacio encuentra el tipo de documento del usuario
+</td>
 </tr>
 <tr>
     <td>desc_tdoc</td>
@@ -408,7 +409,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese la descripcion del tipo de documento</td>
+    <td>Sr usuario en este espacio ubique la descripicon del tipo de documento</td>
 </tr>
 <tr>
     <td>estado_tdoc</td>
@@ -421,7 +422,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el estado del tipo de documento</td>
+    <td>Sr usuario en este espacio ubique el estado del tipo de documento</td>
 </tr>
 <table id='usuario'>
 <caption>usuario</caption>
@@ -441,7 +442,7 @@
 </tr>
 <tr>
     <td>id_usuario</td>
-    <td>VARCHAR(30)</td>
+    <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -450,11 +451,11 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese la identificacion del usuario</td>
+    <td>Sr usuario en este espacio ubique el id del usuario</td>
 </tr>
 <tr>
     <td>tipo_documento_t_doc</td>
-    <td>VARCHAR(4)</td>
+    <td>INT</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -463,7 +464,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Sr usuario en este espacio ubique el tipo de documento</td>
 </tr>
 <tr>
     <td>nombres</td>
@@ -476,7 +477,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese los nombres del usuario</td>
+    <td>Sr usuario en este espacio ubique los nombres del usuario</td>
 </tr>
 <tr>
     <td>apellidos</td>
@@ -489,7 +490,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese los apellidos del usuario</td>
+    <td>Sr usuario en este espacio ubique los apellidos del usuario</td>
 </tr>
 <tr>
     <td>direccion</td>
@@ -502,11 +503,11 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese la direccion del usuario</td>
+    <td>Sr usuario en este espacio ubique la direccion del usuario</td>
 </tr>
 <tr>
-    <td>telefono</td>
-    <td>VARCHAR(20)</td>
+    <td>teléfono</td>
+    <td>INT(30)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -515,7 +516,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el telefono del usuario</td>
+    <td>Sr usuario en este espacio ubique el telefono del usuario</td>
 </tr>
 <tr>
     <td>email</td>
@@ -528,7 +529,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el email del usuario</td>
+    <td>Sr usuario en este espacio ubique el email del usuario</td>
 </tr>
 <tr>
     <td>estado_usuario</td>
@@ -541,28 +542,12 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr usuario en este espacio ingrese el estado del usuario</td>
-</tr>
-<table id='usuario_has_cotizacion'>
-<caption>usuario_has_cotizacion</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
+    <td>Sr usuario en este espacio ubique el estado del usuario</td>
 </tr>
 <tr>
-    <td>usuario_id_usuario</td>
-    <td>VARCHAR(30)</td>
-    <td>&#10004;</td>
+    <td>carro_de_compras_cod_carro</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -570,20 +555,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>cotizacion_id_cotizacion</td>
-    <td>VARCHAR(6)</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
+    <td>Sr usuario en este espacio ubique el codigo del carro </td>
 </tr>
 <table id='usuario_has_rol'>
 <caption>usuario_has_rol</caption>
@@ -603,7 +575,7 @@
 </tr>
 <tr>
     <td>usuario_id_usuario</td>
-    <td>VARCHAR(30)</td>
+    <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -612,11 +584,11 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Sr usuario en este espacio ubique el id del usuario</td>
 </tr>
 <tr>
     <td>rol_cod_rol</td>
-    <td>VARCHAR(6)</td>
+    <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -625,7 +597,62 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
+    <td>Sr usuario en este espacio ubique el rol del usuario</td>
+</tr>
+<table id='venta'>
+<caption>venta</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>cod_venta</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
     <td></td>
+    <td>Sr usuario en este espacio ubique el codigo de la venta</td>
+</tr>
+<tr>
+    <td>total</td>
+    <td>INT(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr usuario en este espacio ubique el total de la venta</td>
+</tr>
+<tr>
+    <td>estado_venta</td>
+    <td>TINYINT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr usuario en este espacio ubique el estado de la venta </td>
 </tr>
 </table>
 </body>
