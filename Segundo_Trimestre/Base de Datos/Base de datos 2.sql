@@ -8,7 +8,7 @@ create database farmifarmacy;
 		primary key (cod_lote)
 		);
 
-	create table vendedor (
+	create table empleado (
 		id_vendedor varchar(15) not null,
 		p_nombre varchar(25) not null,
 		s_nombre varchar(20) null,
