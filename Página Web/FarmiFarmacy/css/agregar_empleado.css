@@ -1,0 +1,48 @@
+.main-container.agregar input {
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	width: 30%;
+}
+
+.main-container.agregar .form-control {
+	text-align-last: center;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.main-container.agregar label {
+	text-align-last: center;
+	font-size: 14px;font-weight: bold;
+}
+
+.main-container.agregar select {
+    width: 30%;
+}
+
+.main-container.agregar button {
+    width: 10%;
+    height: 40px;
+    border-radius: 25px;
+    margin: 1rem 0;
+    font-size: 20px;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    background-size: 200%;
+    transition: .5s;
+}
+
+.main-container.agregar button:hover {
+    background-position: right;
+}
+
+.main-container.agregar{
+	margin-left: 200px;
+	transition: 0.3s;
+}
+
+#check:checked ~ .main-container.agregar {
+	margin-left: 10px;
+}
