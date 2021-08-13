@@ -7,7 +7,7 @@
 
 
 ## Eslogan
-#### _(Farmi Familia cuidándote las 24 horas del día)_
+#### _(Farmi Farmacy cuidándote las 24 horas del día)_
 
 
 ## Objetivos generales
