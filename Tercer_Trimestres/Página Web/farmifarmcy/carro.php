@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Carro de Compras</title>
-	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="stylesheet" type="text/css" href="css/cliente.css">
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
 				<li><a href="#">Categorias<i class="icon ion-md-arrow-dropdown"></i></a>
 					<ul>
 						<li><a href="sobre_nosotros.php">Sobre Nosotros</a></li>
-						<li><a href="home.php">Productos</a></li>
+						<li><a href="cliente.php">Productos</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Sesión<i class="icon ion-md-arrow-dropdown"></i></a>

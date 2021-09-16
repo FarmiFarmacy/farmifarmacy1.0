@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             {
                 echo"<script>
                     alert('El Producto ya está Agregado');
-                    window.location.href='home.php';
+                    window.location.href='cliente.php';
                 </script>";
             }
             else
@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
                 $_SESSION['cart'][$count]=array('Item_Name'=>$_POST['Item_Name'],'Price'=>$_POST['Price'],'Quantity'=>1);
                 echo"<script>
                     alert('Producto Agregado');
-                    window.location.href='home.php';
+                    window.location.href='cliente.php';
                 </script>";
             }
         }
@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             $_SESSION['cart'][0]=array('Item_Name'=>$_POST['Item_Name'],'Price'=>$_POST['Price'],'Quantity'=>1);
             echo"<script>
                 alert('Item Added');
-                window.location.href='home.php';
+                window.location.href='cliente.php';
             </script>";
         }
     }

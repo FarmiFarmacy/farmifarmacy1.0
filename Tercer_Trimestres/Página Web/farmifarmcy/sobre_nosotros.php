@@ -77,7 +77,7 @@
   </div>
   <div class="cont-expert">
     <img src="img/Product Manager_Flatline.svg" alt="">
-    <a href="home.php "><h3 class="n-expert">Productos</h3></a>
+    <a href="cliente.php "><h3 class="n-expert">Productos</h3></a>
   </div>
 </section>
 </section>
