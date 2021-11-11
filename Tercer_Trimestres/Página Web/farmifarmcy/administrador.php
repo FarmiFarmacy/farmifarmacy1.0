@@ -29,14 +29,14 @@
 </head>
 <body>
 	<header>
-		<a href="cliente.php" class="logo">
+		<a href="administrador.php" class="logo">
 			<span>Farmi</span>Farmacy</a>
 			<p class="eslogan">Cuidándote las <span>24</span> horas del día</p>
 			<nav class="navbar">
-				<li><a href="#">Categorias<i class="icon ion-md-arrow-dropdown"></i></a>
+				<li><a href="#">Inventario<i class="icon ion-md-arrow-dropdown"></i></a>
 					<ul>
-						<li><a href="sobre_nosotros.php">Sobre Nosotros</a></li>
-						<li><a href="cliente.php">Productos</a></li>
+						<li><a href="administrador.php">productos</a></li>
+						<li><a href="modificar.php">Modificar Inventario</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Sesión<i class="icon ion-md-arrow-dropdown"></i></a>
