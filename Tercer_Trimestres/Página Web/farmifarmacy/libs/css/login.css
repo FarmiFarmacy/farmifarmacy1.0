@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+form{
+    width: 360px;
+}
+
+.avatar{
+    width: 100px;
+}
+
+form h2{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 15px 0;
+    color: #000;
+}
+
+.input-div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 0 auto;
+    padding: 0 auto;
+    border-bottom: 2px solid rgb(110, 110, 110);
+}
+
+.input-div:after, .input-div:before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #38ced3;
+    transition: .3s;
+}
+
+.input-div:after{
+    right: 50%;
+}
+
+.input-div:before{
+    left: 50%;
+}
+
+.input-div.focus .i i{
+    color: #38ced3;
+}
+
+.input-div.focus div h5{
+    top: -5px;
+    font-size: 20px;
+}
+
+.input-div.focus:after, .input-div.focus:before{
+    width: 50%;
+}
+
+.input-div.two{
+    margin-bottom: 20px;
+}
+
+.i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i i{
+    color: rgb(110, 110, 110);
+    transition: .3s;
+}
+
+.input-div > div{
+    position: relative;
+    height: 45px;
+}
+
+.input-div > div h5{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+    font-size: 17px;
+    transition: .3s;
+}
+
+.input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 17px;
+    color: #000;
+}
+
+a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    transition: .3s;
+}
+
+a:hover{
+    color: #3847d3;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 1rem 0;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #3273be, #3385e4, #3478c7);
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    background-size: 200%;
+    transition: .5s;
+}
+
+.btn:hover{
+    background-position: right;
+}

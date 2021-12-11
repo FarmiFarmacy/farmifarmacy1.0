@@ -1,0 +1,396 @@
+* {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+}
+
+:root {
+	--verde: #0c443a;
+	--limon: #25d1b2;
+	--degradado: linear-gradient(90deg, var(--limon), var(--verde));
+}
+
+*::selection {
+	background: var(--limon);
+	color: white;
+}
+
+html {
+	font-size: 62.4%;
+}
+
+body {
+	background: #f9f9f9;
+}
+
+header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+	padding: 2rem 5%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header .logo {
+	font-size: 2.5rem;
+	color: var(--verde);
+    text-decoration: none;
+}
+
+header .logo span {
+	color: var(--limon);
+}
+
+header .navbar a {
+	font-size: 2rem;
+	margin-left: 2rem;
+	color: var(--verde);
+}
+
+header .navbar a:hover {
+	color: var(--limon);
+}
+
+header label {
+	font-size: 3rem;
+	color: var(--verde);
+	cursor: pointer;
+	visibility: hidden;
+	opacity: 0;
+}
+
+header .eslogan span {
+	color: var(--limon);
+}
+
+li {
+	float: left;
+	list-style: none;
+	position: relative;
+}
+
+li a {
+	display: block;
+	padding: 0 1rem;
+	color: #0a0a0a;
+	text-decoration: none;
+}
+
+li ul {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	border: 0.5px solid #ccc;
+}
+
+li:hover ul {
+	display: block;
+}
+
+li ul li {
+	width: 100%;
+}
+
+li ul li a {
+	padding: 0.5rem 1rem;
+	line-height: unset;
+	white-space: nowrap;
+}
+
+li ul li a:hover {
+	background-color: #efefef;
+}
+
+p {
+	font-size: 22px;
+}
+
+.buscar {
+	position: right;
+	padding: 5px;
+}
+
+.buscar input {
+	width: 150px;
+	height: 30px;
+	padding: 0 10px;
+	font-size: 18px;
+	color: #000;
+	outline: none;
+	border: 1px solid silver;
+	border-radius: 30px;
+}
+
+.title {
+	text-align: center;
+	font-size: 40px;
+	color: #6a6a6a;
+	margin-top: 0px;
+	font-weight: 100;
+}
+
+/* container */
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	height: 430px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
+}
+
+.container .card {
+	width: 330px;
+	height: 350px;
+	border-radius: 10px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	margin: 20px;
+	text-align: center;
+	transition: all 0.25s;
+}
+
+.container .card:hover {
+	transform: translate(-15px);
+	box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img {
+	width: 330px;
+	height: 220px;
+}
+
+.container .card h4 {
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.container .card p {
+	padding: 0 1rem;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+header .navbar .iconShopping {
+	cursor: pointer;
+	z-index: 1;
+	position: relative;
+	font-size: 1.8rem;
+}
+
+header .navbar .iconShopping p {
+	position: absolute;
+	top: -8px;
+	left: 40px;
+	font-size: 20px;
+	padding: 5px 15px;
+	border-radius: 10%;
+}
+
+.col-lg-10 .table tr>th {
+	font-size: 20px;
+}
+
+tbody {
+	font-size: 18px;
+}
+
+.col-lg-3 {
+	font-size: 16px;
+	text-align: center;
+}
+
+.col-lg-3 h4 {
+	font-size: 20px;
+}
+
+.col-lg-3 h5 {
+	font-size: 20px;
+}
+
+.sidebar {
+    z-index: 1;
+    background: lightskyblue;
+    position: fixed;
+    top: 128px;
+    width: 265px;
+    height: calc(100% - 9%);
+    transition: 0.3s;
+    transition-property: width;
+    overflow-y: auto;
+}
+
+.sidebar .profile-image img {
+    margin: 20px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.sidebar .profile-image h4 {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidebar .profile-image h5 {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidebar .item {
+    width: 280px;
+    overflow: hidden;
+}
+
+.sidebar .item .menu-btn {
+	font-weight: bold;
+    font-size: 14px;
+    display: block;
+    color: #000;
+    position: relative;
+    padding: 10px 20px;
+    transition: 0.3s;
+    transition-property: color;
+}
+
+.sidebar .item .menu-btn:hover {
+    color: #fff;
+}
+
+.sidebar .item .menu-btn i {
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.sidebar .item .menu-btn .drop-down {
+    float: right;
+    font-size: 25px;
+    margin-top: 3px;
+}
+
+.sidebar .item .sub-menu {
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s;
+    transition-property: background, max-height;
+}
+
+.sidebar .item .sub-menu a {
+    display: block;
+    position: relative;
+    color: #000;
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 15px;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.sidebar .item .sub-menu a:hover {
+    background: #25d1b2;
+}
+
+.sidebar .item .sub-menu i {
+    padding-right: 20px;
+    font-size: 24px;
+}
+
+.sidebar .item:target .sub-menu {
+    max-height: 500px;
+}
+
+label #sidebar_btn {
+	z-index: 1;
+	color: #000;
+	position: fixed;
+	cursor: pointer;
+	left: 20px;
+	font-size: 25px;
+	margin: 5px 0;
+	transition: 0.3s;
+	transition-property: color;
+}
+
+label #sidebar_btn:hover {
+	color: var(--limon);
+}
+
+#check:checked ~ .sidebar {
+	left: -190px;
+}
+
+#check:checked ~ .sidebar a span {
+	display: none;
+}
+
+#check:checked ~ .sidebar a {
+	font-size: 20px;
+	margin-left: 190px;
+	width: 90px;
+}
+
+.main-container.empleado{
+	margin-left: 200px;
+	transition: 0.3s;
+}
+
+#check:checked ~ .main-container.empleado {
+	margin-left: 10px;
+}
+
+.main-container.admin{
+	margin-left: 250px;
+	transition: 0.3s;
+}
+
+#check:checked ~ .main-container.admin {
+	margin-left: 200px;
+}
+
+#check {
+	display: none;
+}
+
+.main-container.empleado table {
+	margin-top: 50px;
+	caption-side: bottom;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+}
+
+.main-container.empleado th{
+	border: 2px solid black;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: lightskyblue;
+}
+
+.main-container.empleado td {
+	border: 2px solid black;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.main-container.empleado button {
+	font-size: 14px;
+	font-weight: bold;
+}
